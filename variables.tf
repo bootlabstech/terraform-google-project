@@ -45,7 +45,7 @@ variable "is_service_project" {
 }
 
 variable "host_project_id" {
-  type        = bool
+  type        = string
   description = "the host project id; only needed when is_service_project is set to true"
   default     = ""
 }
