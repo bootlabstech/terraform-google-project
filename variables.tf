@@ -13,7 +13,7 @@ variable "billing_account" {
   type        = string
   description = <<-EOT
   {
-   "type": "json",
+   "type": "api",
    "purpose": "autocomplete",
    "data": "/api/v1/autocomplete/billingid",
    "description": "The alphanumeric ID of the billing account this project belongs to."
@@ -25,7 +25,7 @@ variable "org_id" {
   type        = string
   description = <<-EOT
   {
-   "type": "json",
+   "type": "api",
    "purpose": "autocomplete",
    "data": "/api/v1/autocomplete/organizationID",
    "description": "The numeric ID of the organization this project belongs to. Changing this forces a new project to be created."
