@@ -11,12 +11,26 @@ variable "project_id_prefix" {
 
 variable "billing_account" {
   type        = string
-  description = "The alphanumeric ID of the billing account this project belongs to. The user or service account performing this operation with Terraform must have at minimum Billing Account User privileges (roles/billing.user) on the billing account."
+  description = <<-EOT
+  {
+   "type": "json",
+   "purpose": "autocomplete",
+   "data": "/api/v1/autocomplete/billingid",
+   "description": "The alphanumeric ID of the billing account this project belongs to."
+}
+EOT
 }
 
 variable "org_id" {
   type        = string
-  description = "The numeric ID of the organization this project belongs to. Changing this forces a new project to be created. Only one of org_id or folder_id may be specified. If the org_id is specified then the project is created at the top level. Changing this forces the project to be migrated to the newly specified organization."
+  description = <<-EOT
+  {
+   "type": "json",
+   "purpose": "autocomplete",
+   "data": "/api/v1/autocomplete/organizationID",
+   "description": "The numeric ID of the organization this project belongs to. Changing this forces a new project to be created."
+}
+EOT
 }
 
 // optional variables
