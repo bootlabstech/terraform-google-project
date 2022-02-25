@@ -90,3 +90,7 @@ variable "host_project_id" {
   description = "the host project id; only needed when is_service_project is set to true"
   default     = ""
 }
+variable "tags" {
+  type        = list(string)
+  description = "this will be used for tagging resources."
+}
